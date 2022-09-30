@@ -37,5 +37,6 @@ const pool = new pg.Pool({
   } else {
     console.log('Got expected result.');
   }
+  pool.end();
   console.log('Completed OK.');
 })();
