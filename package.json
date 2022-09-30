@@ -9,6 +9,6 @@
   },
   "scripts": {
     "start": "node index.js",
-    "clean-code": "grep -Ev 'console|jubilant' index.js"
+    "pretty": "grep -Ev 'console|jubilant' index.js"
   }
 }

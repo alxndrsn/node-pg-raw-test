@@ -1,4 +1,3 @@
-const { Transform } = require('node:stream');
 const pg = require('pg');
 const QueryStream = require('pg-query-stream');
 
@@ -12,7 +11,7 @@ const pool = new pg.Pool({
 
 (async () => {
   console.log('Starting...');
-  const query = new QueryStream('SELECT * FROM generate_series(0, 100000) AS n');
+  const query = new QueryStream('SELECT * FROM GENERATE_SERIES(0, 100000)');
   console.log('Querying...');
   const client = await pool.connect();
   const stream = await client.query(query);
