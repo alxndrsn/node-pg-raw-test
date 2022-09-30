@@ -33,7 +33,7 @@ const pool = new pg.Pool({
   console.log('Querying again...');
   const res = await pool.query('SELECT TRUE AS val');
   if(res.rows.length !== 1 || res.rows[0].val !== true) {
-    throw new Error('Unexpected res: ' + JSON.stringify(res.rows));
+    throw new Error(`Unexpected res: ${JSON.stringify(res.rows)}`);
   } else {
     console.log('Got expected result.');
   }
