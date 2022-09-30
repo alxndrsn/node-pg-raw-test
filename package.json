@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "volta": {
+    "node": "16.17.0"
+  },
   "dependencies": {
     "pg": "^8.8.0",
     "pg-query-stream": "^4.2.4"
